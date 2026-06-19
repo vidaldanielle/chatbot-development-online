@@ -167,8 +167,7 @@ vectors = embedding_model.encode(
 # =========================
 
 client = QdrantClient(
-    host="localhost",
-    port=6333
+    path="./qdrant_data"
 )
 
 

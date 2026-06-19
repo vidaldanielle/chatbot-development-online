@@ -8,8 +8,7 @@ embedding_model = SentenceTransformer(
 )
 
 client = QdrantClient(
-    host="localhost",
-    port=6333
+    path="./qdrant_data"
 )
 
 collection, _ = client.scroll(
