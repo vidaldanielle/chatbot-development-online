@@ -10,7 +10,7 @@ from langchain_community.llms import (
 # =========================
 
 llm = Ollama(
-    model="qwen3:8b",
+    model="qwen3:1.7b",
     temperature=0
 )
 
