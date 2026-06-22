@@ -125,8 +125,8 @@ def hybrid_search(query, top_k=10):
 
         # Combine BM25 + Dense scores
         hybrid_score = (
-            0.4 * bm25_scores[idx] +                 # keyword relevance
-            0.6 * dense_scores.get(doc_text, 0)     # semantic relevance
+            0.3 * bm25_scores[idx] +                 # keyword relevance
+            0.7 * dense_scores.get(doc_text, 0)     # semantic relevance
         )
 
         # Store final scored result
