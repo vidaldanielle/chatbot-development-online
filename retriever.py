@@ -105,9 +105,9 @@ def hybrid_search(query, top_k=10):
 
     # Query Qdrant vector database
     dense_results = client.query_points(
-        collection_name="company_docs",
-        query=query_vector,
-        limit=50
+        collection_name="company_docs", #collection in ingest.py
+        query=query_vector, #vector representation of user question
+        limit=50 #Top 50 most similar vectors
     )
 
     # Store dense scores mapped by document text

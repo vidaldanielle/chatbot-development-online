@@ -42,11 +42,11 @@ if len(documents) == 0:
 # =========================
 # Splits large documents into smaller chunks for embedding
 # chunk_size = 512 tokens/characters (approx)
-# overlap = 150 ensures context continuity between chunks
+# overlap = 100 ensures context continuity between chunks
 
 splitter = RecursiveCharacterTextSplitter(
     chunk_size=512,
-    chunk_overlap=150
+    chunk_overlap=100
 )
 
 
@@ -147,7 +147,7 @@ except:
 client.create_collection(
     collection_name="company_docs",
     vectors_config=VectorParams(
-        size=512,                 # vector size (must match embedding model output)
+        size=1024,                 # vector size (must match embedding model output)
         distance=Distance.COSINE   # similarity metric
     )
 )
